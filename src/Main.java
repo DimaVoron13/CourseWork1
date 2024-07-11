@@ -55,6 +55,6 @@ public class Main {
         System.out.println();
         Employee.printPeopleLesOf25_000Salary(employees);
         System.out.println();
-        Employee.printPeopleMoreOf25_000Salary(employees);
+
     }
 }
