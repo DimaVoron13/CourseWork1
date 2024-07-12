@@ -46,7 +46,11 @@ public class EmployeeBook {
 
     public void listOfAllEmployees() {
         for (Employee employee : employees) {
+            if (employee != null) {
             System.out.println(employee);
+            } else {
+                return;
+            }
         }
     }
 
