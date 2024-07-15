@@ -2,11 +2,11 @@ import java.util.Objects;
 
 public class Employee {
 
+    private final int id;
     private final String fullName;
     private int department;
     private int salary;
     private static int count = 0;
-    private final int id;
 
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
@@ -47,10 +47,10 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return getDepartment() == employee.getDepartment() && getSalary() == employee.getSalary() && id == employee.id && Objects.equals(getFullName(), employee.getFullName());
+        return id == employee.id;
     }
 
     public int hashCode() {
-        return Objects.hash(getFullName(), getDepartment(), getSalary(), id);
+        return Objects.hash(id);
     }
 }
